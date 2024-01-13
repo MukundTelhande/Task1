@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Cars Landing Page</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    background-image: url('mercedes.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+
+.feature {
+    border: 1px solid rgb(69, 64, 64);
+    border-radius: 1rem;
+    width: 24rem;
+    height: 22rem;
+    text-align: center;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4x 8px rgba(0,0,0,0.2);
+    border: 1px solid blue;
+}
+
+.feature-img{
+    width: 30%;
+    height: 25%;
+    margin-top: 1rem;
+}
+
+.features{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    margin: 0 auto;
+    padding-left: 8.5rem;
+    padding-top: 0.8rem;
+ }
+
+.feature-heading:hover{
+    color: rgb(78, 78, 175);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contents{
+    text-align: center;
+    padding-left: 3rem;
+}
+
+.information{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 4rem;
+    margin-right: 3rem;
+}
+
+.info-para{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgb(101, 93, 93);
+}
+
+.info-heading{
+    padding-left: 5rem;
+}
+
+.info-img{
+    width: 40rem;
+    height: 20rem;
+    border: none;
+    border-radius: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-img:hover{
+    transform: scale(1.09);
+    box-shadow: 0 4x 8px rgba(0,0,0,0.2);
+    border: 1.4px solid rgb(189, 119, 119);
+}
+
+.main-info{
+    background-color: #f7efef;
+    padding-top: 1.2rem;
+}
+
+.first-class{
+    text-align: center;
+    padding-left: 2rem;
+}
+
+.safety-measures{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    background-color: #f7efef;
+}
+
+.safety-eqip{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid rgb(131, 123, 123);
+    border-radius: 1.2rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.safety-eqip:hover{
+    transform: scale(1.01);
+    box-shadow: 0 4x 8px rgba(0,0,0,0.2);
+    border: 1px solid blue;
+}
+
+.safety-img{
+    width: 10rem;
+    height: 10rem;
+    padding-left: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.safety-para{
+    width: 150%;
+}
+
+.heading-style{
+   margin-bottom: 1px;
+}
+
+.testimonial-container{
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.testimonial-title{
+    font-size: 1.875rem;
+    font-weight: bold;    
+}
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    width: 1200px;
+}
+.testimonial-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(126, 115, 115);
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.2rem;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4x 8px rgba(0,0,0,0.2);
+    border: 1px solid blue;
+}
+.testimonial-avatar img{
+    height: 5rem;
+    width: 5rem;
+}
+.testimonial-text{
+    color: #555;
+    font-size: 0.875rem;
+}
+.testimonial-name{
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+.testimonial-desc{
+    font-size: 0.875rem;
+    color: #777 ;
+}
+
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>F1 Cars</h1>
+            <p>Welcome to a world of innovation and creativity.</p>
+            <a href="#features" class="cta-button">Learn More</a>
+        </div>
+    </header>
+
+    <div class="info-title">
+        <h1 class="info-heading">About F1 cars</h1>
+    </div>
+
+    <section class="main-info">
+    <div class="information">
+        <p class="info-para">A Formula One car or F1 car is a single-seat, open-cockpit, open-wheel formula racing car with substantial front and rear wings, and an engine positioned behind the driver, intended to be used in competition at Formula One racing events. The regulations governing the cars are unique to the championship and specify that cars must be constructed by the racing teams themselves, though the design and manufacture can be outsourced.Formula One cars are the fastest cars in the world around a race track, owing to very high cornering speeds achieved through the generation of large amounts of aerodynamic downforce.Due to the amount of braking force and the total cornering envelope of a Formula One car (by the friction component of the tyre, the mass of the machine and the downforce generated),Formula One drivers experience frequent lateral g-loadings in excess of five g[5] and peak cornering forces of up to seven lateral g.</p>
+        <img src="information.png" alt="info" class="info-img">
+    </div>
+   </section>
+
+    <div class="contents">
+        <h1>Some Components of F1 Cars</h1>
+    </div>
+
+    <section id="features" class="features">
+        <div class="feature">
+            <img src="hoodvent.webp" alt="Feature 1" class="feature-img">
+            <h2 class="feature-heading">Hood Vent</h2>
+            <p>Hood vents aim to allow a clean passage of air through the radiator. They assist in maintaining airflow through the engine bay, thereby increasing cooling.</p>
+        </div>
+        <div class="feature">
+            <img src="underbelly.jpg" alt="Feature 2" class="feature-img">
+            <h2 class="feature-heading">Underbelly</h2>
+            <p>Underbellies are made smooth and flat to minimize the drag for racing. It also reduces the turbulence under the car.Combined with the rear diffuser, the pressure underneath the vehicle can result in significant downforce.</p>
+        </div>
+        <div class="feature">
+            <img src="naca ducts.jpg" alt="Feature 3" class="feature-img">
+            <h2 class="feature-heading">NACA Ducts</h2>
+            <p>The NACA ducts are air scoops that have minimal effect on the airflow. These ducts fit any application that requires airflow. You might not be aware, but the Ferrari F40 extensively uses the NACA ducts.</p>
+        </div>
+        <div class="feature">
+            <img src="diffuser.jpg" alt="feature 4" class="feature-img">
+            <h2 class="feature-heading">Diffuser</h2>
+            <p>The diffusers are a part of the underbody, designed to have a spot of increasingly larger air volume below the car's rear. The diffuser allows fast-moving low air pressure to expand and decelerate at the rear end. </p>
+        </div>
+        <div class="feature">
+            <img src="spoiler.jpg" alt="feature 5" class="feature-img">
+            <h2 class="feature-heading">Spoiler</h2>
+            <p>Spoilers act as an obstruction in the path of lift-creating airflow to prevent lifting in the car. As a result of the spoiler, the course of the air alters. In other words, the airflow at the car's rear leaves in an upward and horizontal manner.</p>
+        </div>
+        <div class="feature">
+            <img src="rear wing.jpg" alt="feature 6" class="feature-img">
+            <h2 class="feature-heading">Rear Wing</h2>
+            <p>The rear wings in race cars are much like air foils. The hind wings have a design to deflect airflow vertically. The wings force the air to interact, so the vehicle is pushed down.</p>
+        </div>
+    </section>
+
+    <h1 class="first-class">Safety Measures</h1>
+    <section class="safety-class">   
+        <div class="safety-measures">
+        <div class="safety-eqip">
+            <h2 class="heading-style">Helmets</h2>
+            <p class="safety-para">A driver's helmet remains one of the most important pieces of safety equipment in F1.Helmet technology is continually advancing, with tougher outer shells and more impact absorbent insides with each generation.Back at the dawn of the championship in 1950, drivers wore cloth caps paired with goggles, which did little other than protect them from dirt and insects before cork helmets became mandatory in 1952.Over the decades, with the invention of Nomex, the addition of visors and eventually the embracing of full-face helmets increased the protection of the drivers.</p>
+            <img src="helmet.jpg" alt="helmet" class="safety-img">
+        </div>
+        <div class="safety-eqip">
+            <h2>The survival cell</h2>
+            <p class="safety-para">The survival cell, or monocoque, is the central part of the F1 car, in which the driver is seated.It is built out of 6mm of exceedingly strong carbon fibre composite with a layer of Kevlar, which is penetration resistant and crash-protection structures can absorb huge amounts of energy during a crash.It must undergo extensive crash testing before it can be deemed safe to race in.It is also fitted with a fire suppression system that can be activated by the driver or externally that sprays fire retardant foam around the monocoque and engine.</p>
+            <img src="SurvivalCell.jpg" alt="survival" class="safety-img">
+        </div>
+        <div class="safety-eqip">
+            <h2>The safety car </h2>
+            <p class="safety-para">The safety car is an important part of F1, keeping speeds down and stopping overtaking while there are hazards on track that mean it would be unsafe for the cars to be going full speed, such as stationery cars, debris or bad weather.The safety car now has professional racing driver Bernd Maylander at the wheel who has occupied the role for 21 years.The current safety car, a Mercedes AMG GT R has a top speed of 315km/h and has been used since 2018.These incidents highlight the risks that are now avoided by no longer having mechanics put fuel into cars under such intense pressure.</p>
+            <img src="safetycar.jpg" alt="safety" class="safety-img">
+        </div>
+        </div>
+    </section>
+
+    <div class="testimonial-container">
+        <div class="testimonial-content">
+            <h2 class="testimonial-title">Some of best F1 Car Racers</h2>
+            <div class="testimonial-grid">
+                <!--card1-->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        In terms of career wins and total career points, Lewis Hamilton is the best Formula 1 driver to have ever graced a circuit. The Brit has taken wins in 30 different countries, won a race in almost every season he’s competed in, and is currently tied on world championships with Michael Schumacher.    
+                    </div>
+                <div class="testimonial-avatar">
+                    <img src="lewis.jpg" alt="">
+                </div>
+                <div class="testimonial-details">
+                    <h3 class="testimonial-name">Lewis Hamilton</h3>
+                    <p class="testimonial-desc">World Championships: 7 (2008, 2014-15, 2017-20) <br>
+                        Number of races: 332 <br>
+                        Number of wins: 103 </p>
+                </div>
+            </div>
+                <!--card2-->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Sebastian Vettel began his karting career aged eight, and was impressed enough to be promoted to the Red Bull Junior Tea aged 11. He made his debut in 2007 as a stand-in for Robert Kubica after his massive Canadian Grand Prix crash midway through the season."
+                    </div>
+                <div class="testimonial-avatar">
+                    <img src="sebastin.jpg" alt="">
+                </div>
+                <div class="testimonial-details">
+                    <h3 class="testimonial-name">Sebastian Vettel</h3>
+                    <p class="testimonial-desc">Championships: 4 (2010, 2011, 2012, 2013) <br>
+                        First race: 2007 United States Grand Prix <br>
+                        Number of pole positions: 57</p>
+                </div>
+            </div>
+                <!--card3-->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Despite registering four World Championships and more than 50 wins, Alain Prost’s success could have been even greater. His name has cropped up in the stories of drivers we’ve already told, because Prost was consistently at the front of the grid."
+                    </div>
+                <div class="testimonial-avatar">
+                    <img src="alain.jpg" alt="">
+                </div>
+                <div class="testimonial-details">
+                    <h3 class="testimonial-name">Alain Prost</h3>
+                    <p class="testimonial-desc"> Championships: 4 (1985, 1986, 1989, 1993) <br>
+                        First race: 1980 Argentine Grand Prix <br>
+                        Number of pole positions: 33</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+
+    <footer class="footer">
+        <p>&copy; 2023 Formula Racing. All rights reserved.</p>
+    </footer>
+</body>
+</html>
